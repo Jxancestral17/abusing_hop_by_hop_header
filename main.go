@@ -28,5 +28,11 @@ func main() {
 		}
 		time.Sleep(time.Millisecond * 300)
 	}
-	fmt.Println("\n\nCreated by Jxancestral17 - 2023 - V 1.2")
+	fmt.Println("")
+	if headers.Result == 0 {
+		fmt.Println("[-]No poisoning detected")
+	} else {
+		fmt.Println("[+]Poisoning detected open report.log")
+	}
+	fmt.Println("\n\nCreated by Jxancestral17 - 2023 - V 1.5")
 }
