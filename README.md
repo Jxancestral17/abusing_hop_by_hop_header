@@ -14,5 +14,5 @@ go run main.go https://google.com
 ```
 
 - Send 3/4 requests for second 
-- If it detects a possible poisoning it creates a log file
-- If you want to add headers add them ./headers/headers.dat (currently taken from seclists)
+- If it detects a possible poisoning, it creates a log file
+- If you want to add more headers, add them ./headers/headers.dat (currently taken from seclists)
