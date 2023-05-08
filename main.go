@@ -10,6 +10,7 @@ import (
 
 func main() {
 	headers.Url = os.Args[1]
+
 	fmt.Println("[+]Read headers file")
 	headers.Headers = headers.Readfile()
 	for i := 0; i < len(headers.Headers); i++ {
@@ -27,5 +28,5 @@ func main() {
 		}
 		time.Sleep(time.Millisecond * 300)
 	}
-	fmt.Println("\n\nCreated by Jxancestral17 - 2023 - V 1.0")
+	fmt.Println("\n\nCreated by Jxancestral17 - 2023 - V 1.2")
 }
