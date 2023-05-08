@@ -17,6 +17,8 @@ var (
 	Url     string
 	Headers []string
 
+	Result int = 0
+
 	seededRand *rand.Rand = rand.New(rand.NewSource(time.Now().UnixNano()))
 )
 
@@ -127,10 +129,13 @@ func Check(resp1 *http.Response, resp2 *http.Response, headers string) {
 		if resp1.StatusCode != resp2.StatusCode {
 			fmt.Printf("[+]URL: %s\nRequest one - Status Code: %d\nRequest two - Status Code: %d\n\nHeaders used: %s\n", Url, resp1.StatusCode, resp2.StatusCode, headers)
 			report("URL: " + Url + "\nRequest one - Status Code: " + string(resp1.StatusCode) + "\nRequest two - Status Code: " + string(resp2.StatusCode) + "\n\nHeaders used: " + headers + "\n")
+			Result++
 		}
 		if lengResp1 != lengResp2 {
 			fmt.Printf("[+]URL: %s\nRequest one - Size: %d Bytes\nRequest two - Size: %dBytes\n\nHeaders used: %s\n", Url, lengResp1, lengResp2, headers)
 			report("URL: " + Url + "\nRequest one - Size: " + string(lengResp1) + " Bytes\nRequest two - Size: " + string(lengResp2) + " Bytes\n\nHeaders used: " + headers + "\n")
+			Result++
+
 		}
 	}
 
