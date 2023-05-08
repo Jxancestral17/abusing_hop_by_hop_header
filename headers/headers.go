@@ -144,4 +144,5 @@ func Check(resp1 *http.Response, resp2 *http.Response, headers string) {
 			fmt.Printf("[-]No poisoning detected\n")
 		}
 	}
+
 }

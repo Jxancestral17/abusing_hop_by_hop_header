@@ -27,5 +27,5 @@ func main() {
 		}
 		time.Sleep(time.Millisecond * 300)
 	}
-
+	fmt.Println("\n\nCreated by Jxancestral17 - 2023 - V 1.0")
 }
